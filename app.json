@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "ひびログ",
+    "slug": "hibi-log",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "hibi-log",
+    "ios": { "supportsTablet": true, "bundleIdentifier": "jp.example.hibilog" },
+    "android": { "package": "jp.example.hibilog" },
+    "plugins": [
+      ["expo-notifications", { "defaultChannel": "振り返り" }],
+      "expo-secure-store"
+    ],
+    "extra": {
+      "apiUrl": "http://localhost:8787",
+      "stravaClientId": ""
+    }
+  }
+}
