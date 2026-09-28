@@ -30,7 +30,7 @@ This isolated implementation did not install packages. The Expo dependency versi
 
 Only `EXPO_PUBLIC_API_URL` and `EXPO_PUBLIC_STRAVA_CLIENT_ID` may be exposed to the app. `STRAVA_CLIENT_SECRET`, refresh tokens, and `SESSION_SECRET` belong only on the server. The included server stores data in memory for safe local tests; production must replace it with an encrypted-at-rest authenticated datastore, HTTPS, durable sessions, password/passkey or identity-provider authentication, token encryption, backups, and rate limiting.
 
-The current Strava API contract assumed by the adapter is OAuth authorization-code flow with `activity:read`, token refresh on expiry, webhook hints plus bounded differential fetch, and deduplication by activity ID. Rate-limit responses stop import and retain a retry time. The specification links are recorded in [external-services.md](docs/external-services.md); because this run was explicitly offline, live terms and limits must be rechecked before enabling real credentials.
+The current Strava API contract assumed by the adapter is OAuth authorization-code flow with `activity:read`, token refresh on expiry, webhook hints plus bounded differential fetch, and deduplication by activity ID. Rate-limit responses stop import and retain a retry time. The specification links are recorded in external-services.md; because this run was explicitly offline, live terms and limits must be rechecked before enabling real credentials.
 
 Expo local notifications require user permission and physical-device verification. Remote cross-device reminders may incur Expo/cloud-provider operational costs. Strava and the local mock are free to develop against, but production hosting, authentication, database, mail/SMS, and app-store accounts can incur fees. Nothing in this repository deploys or purchases them.
 
@@ -42,4 +42,4 @@ Expo local notifications require user permission and physical-device verificatio
 - `npm run server`: local in-memory API on `127.0.0.1:8787`.
 - `npm start`: Expo development server after dependencies are installed.
 
-See [HANDOVER.md](HANDOVER.md), [device-testing.md](docs/device-testing.md), and [architecture.md](docs/architecture.md).
+See HANDOVER.md, device-testing.md, and architecture.md.
